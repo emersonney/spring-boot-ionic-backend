@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 @Entity
@@ -19,7 +19,7 @@ public class Cidade implements Serializable {
 	private String nome;
 	
 	@ManyToOne
-	@JoinTable(name="estado_id")
+	@JoinColumn(name="estado_id")
 	private Estado estado;
 
 	public Cidade() {
